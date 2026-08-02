@@ -1,0 +1,29 @@
+# --- Core API ---------------------------------------------------------------
+fastapi>=0.110,<1.0
+uvicorn[standard]>=0.27
+pydantic>=2.6,<3.0
+pydantic-settings>=2.2
+python-multipart>=0.0.9
+python-dotenv>=1.0
+httpx>=0.26
+
+# --- Database ---------------------------------------------------------------
+# Optional at runtime: only imported when DB_BACKEND=supabase
+supabase>=2.4,<3.0
+
+# --- Auth -------------------------------------------------------------------
+PyJWT>=2.8
+
+# --- RAG: document extraction ----------------------------------------------
+pypdf>=4.0
+python-docx>=1.1
+
+# --- RAG: embeddings + vector search ---------------------------------------
+# Both are optional. If they are missing, the RAG layer falls back to a local
+# hashing vectoriser + NumPy brute-force search (see rag/embeddings/embedder.py).
+numpy>=1.26
+sentence-transformers>=2.6
+faiss-cpu>=1.8
+
+# Email validation for pydantic EmailStr
+email-validator>=2.1

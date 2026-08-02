@@ -1,0 +1,38 @@
+# --- Secrets ---------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# --- Python ----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# --- Runtime data (regenerable) --------------------------------------------
+# SQLite database, uploaded documents and FAISS indexes. Chunk text lives in the
+# database, so indexes can always be rebuilt from the Knowledge tab.
+backend/data/
+data/
+
+# --- Node ------------------------------------------------------------------
+node_modules/
+dist/
+.vite/
+npm-debug.log*
+yarn-error.log*
+
+# --- Editors / OS ----------------------------------------------------------
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
